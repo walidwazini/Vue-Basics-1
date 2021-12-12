@@ -21,20 +21,19 @@
     <button v-on:click='increment(5)'>Add 5</button>
     <button v-on:click='reset'>Reset</button>
     <button v-on:click='counter = counter - 1'>Minus 1</button>
+    <p v-once >Starting Counter: {{counter}}</p>
     <p>Result: {{ counter }}</p>
     <div>
-      <input type="text" v-on:input='setName1' >
+      <input type="text" v-on:input='setName1'>
       <p>Your Name : {{name1}} </p>
     </div>
     <div>
-      <input type="text" 
-      v-on:input="setName2( $event ,'Ackerman')" 
-      v-on:keyup.enter="confirmInput" >
+      <input type="text" v-on:input="setName2( $event ,'Ackerman')" v-on:keyup.enter="confirmInput">
       <p>Your Name (with last name) : {{confirmedName}} </p>
     </div>
     <div>
-      <form v-on:submit.prevent="submitForm" >
-        <input type="text" >
+      <form v-on:submit.prevent="submitForm">
+        <input type="text">
         <button>Sign Up</button>
       </form>
     </div>
