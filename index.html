@@ -27,8 +27,16 @@
       <p>Your Name : {{name1}} </p>
     </div>
     <div>
-      <input type="text" v-on:input="setName2( $event ,'Ackerman')" >
-      <p>Your Name (with last name) : {{name2}} </p>
+      <input type="text" 
+      v-on:input="setName2( $event ,'Ackerman')" 
+      v-on:keyup.enter="confirmInput" >
+      <p>Your Name (with last name) : {{confirmedName}} </p>
+    </div>
+    <div>
+      <form v-on:submit.prevent="submitForm" >
+        <input type="text" >
+        <button>Sign Up</button>
+      </form>
     </div>
 
   </section>
