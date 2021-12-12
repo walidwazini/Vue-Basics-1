@@ -20,9 +20,17 @@
     <!-- v-on is for event listener -->
     <button v-on:click='increment(5)'>Add 5</button>
     <button v-on:click='reset'>Reset</button>
-    <button v-on:click='counter = counter - 1'>Subtract</button>
+    <button v-on:click='counter = counter - 1'>Minus 1</button>
     <p>Result: {{ counter }}</p>
-     
+    <div>
+      <input type="text" v-on:input='setName1' >
+      <p>Your Name : {{name1}} </p>
+    </div>
+    <div>
+      <input type="text" v-on:input="setName2( $event ,'Ackerman')" >
+      <p>Your Name (with last name) : {{name2}} </p>
+    </div>
+
   </section>
 </body>
 
