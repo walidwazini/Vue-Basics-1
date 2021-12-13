@@ -26,11 +26,10 @@
     <div>
       <input type="text" v-model="name1" v-on:input='setName1'>
       <button v-on:click="resetInput" >Reset Text</button>
-      <p>Your Name : {{name1}} </p>
+      <p>Your Name : {{fullname}} </p>
     </div>
     <div>
       <input type="text"  v-on:input="setName2( $event ,'Ackerman')" v-on:keyup.enter="confirmInput">
-      
       <p>Your Name (with last name) : {{confirmedName}} </p>
     </div>
     
